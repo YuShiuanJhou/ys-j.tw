@@ -1,0 +1,461 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@section PageStyles{
+
+    <link href="~/Content/css/home.css" rel="stylesheet" />
+
+}
+
+<!--Landing Page-->
+<div id="section-landing" class="section">
+
+    <div class="section-content">
+        <div class="main-info">
+            <div class="user-logo-box">
+                <img src="~/Content/img/me2.jpg" alt="me" />
+            </div>
+            <div class="user-introduction">
+                <h1>
+                    我是周宇軒，一個全端開發者
+                </h1>
+                <p>
+                    大數據股份有限公司-資料分析研發工程師
+                </p>
+                <p>
+                    台灣科技大學資管所
+                </p>
+
+            </div>
+        </div>
+        <div class="sub-info">
+            <div class="skills">
+                <div class="label">前端工程</div>
+                <div class="list">
+                    <span>css(scss)</span>
+                    <span>javascript</span>
+                    <span>jquery</span>
+                    <span>bootstrap</span>
+                    <br>
+                    <span>angular1</span>
+                    <span>reactjs</span>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="label">後端工程</div>
+                <div class="list">
+                    <span>C#</span>
+                    <span>.Net MVC</span>
+                    <span>.Net Core</span>
+                    <span>python</span>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="label">資料庫相關</div>
+                <div class="list">
+                    <span>MySQL</span>
+                    <span>MS SQL</span>
+                    <span>MongoDB</span>
+                    <span>Elastic Search</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--關於我-->
+<div id="section-about" class="section">
+    <div class="section-content">
+        <div class="main-info">
+            <div class="text-info">
+                <div class="label">
+                    <div class="text">
+                        <h3><i class="fas fa-address-card"></i>  關於我</h3>
+                    </div>
+                    <div class="contact">
+                        <a target="_blank" href="https://www.linkedin.com/in/%E5%91%A8%E5%AE%87%E8%BB%92/"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:yushiuanjhou@gmail.com"><i class="fas fa-envelope-square"></i></a>
+                    </div>
+                </div>
+                <div class="info">
+                    <p>1993年生，台北人。畢業於台灣科技大學資管所</p>
+                    <p>4年以上Web全端開發經驗，現在在大數據股份有限公司任職，負責AI學術系統的開發，包含網站前後端/巨量資料分析/資料庫管理。過去曾負責新媒體網站、活動網站、line機器人的程式開發。</p>
+                </div>
+                <div class="mini-timeline">
+                    <ul>
+                        <li>
+                            <div class="time">2017/6~Now</div>
+                            <p>
+                                大數據股份有限公司-資料分析研發工程師
+                            </p>
+                        </li>
+                        <li>
+                            <div class="time">2015/8~2017/6</div>
+                            <p>
+                                大數據股份有限公司-程式設計師實習
+                            </p>
+                        </li>
+                        <li>
+                            <div class="time">2015/9~2017/6</div>
+                            <p>
+                                就讀台灣科技大學資訊管理所
+                            </p>
+                        </li>
+                        <li>
+                            <div class="time">2011/9~2015/6</div>
+                            <p>
+                                就讀台灣科技大學，主修資訊工程/企業管理
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="ability-info">
+
+                <div class="ability-header">
+                    <div class="text">
+                        <div class="name">
+                            程式語言/框架/資料庫
+                        </div>
+                        <div class="explain">
+                            熟悉度
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!--前端-->
+                @{
+                    AbilityBar("css(scss),javascript", 85, "color1");
+                    AbilityBar("jquery,bootstrap", 85, "color1");
+                    AbilityBar("angular1", 60, "color1");
+                    AbilityBar("reactjs", 60, "color1");
+                }
+                <!--後端-->
+                @{
+                    AbilityBar(".Net MVC", 90, "color2");
+                    AbilityBar(".Net Core", 80, "color2");
+                    AbilityBar("Python", 75, "color2");
+                }
+
+
+                <!--資料庫-->
+                @{
+                    AbilityBar("MS SQL", 85, "color3");
+                    AbilityBar("Mongo", 80, "color3");
+                    AbilityBar("Elastic Search", 75, "color3");
+                    AbilityBar("MySQL", 70, "color3");
+                }
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--專案經歷-->
+<div id="section-projects" class="section">
+    <div class="section-content">
+        <div class="projects-header">
+            <h3> <i class="fas fa-tasks"></i> 專案經歷</h3>
+        </div>
+        <div class="projects-content">
+            <div class="project">
+                <div class="project-time">
+                    <p>
+                        <i class="fas fa-calendar-day"></i> 2020/9~Now
+                    </p>
+                </div>
+                <div class="project-Img">
+                    <img src="~/Content/img/projects/doresearch.tw.jpg" alt="DoresearchTW" />
+                </div>
+                <div class="project-info">
+                    <div class="name">
+                        <a target="_blank" href="https://doresearch.tw">DoResearch 智能研究平台</a>
+                    </div>
+                    <div class="description">
+                        DoResearch 智能研究平台匯集了2億筆研究文獻，透過AI分析技術大幅提高研究者文獻查找管理的效率。
+                        於2021年6月開放Research.AI研究加速器：基於研究者輸入的關鍵字，透過文本分析推薦關聯性文章，以及內容萃取技術，歸納研究主題、關鍵字、領域、理論等重點，減少研究蒐集的時間成本。<br>
+                        我在本專案負責前後端程式、資料庫管理、巨量資料分析。
+                    </div>
+                </div>
+                <div class="project-detail">
+
+                    <div class="features">
+                        <h4>工作項目</h4>
+                        <ul>
+                            <li>
+                                文獻收集程式 : 撰寫非同步爬蟲程式，收集各大公開文獻平台數據於NoSQL DB
+                            </li>
+                            <li>
+                                資料分析 : 運用NLP技術進行文獻語言判斷和關鍵字萃取、研究理論比對及電子全文公開資料mapping
+                            </li>
+                            <li>
+                                全文檢索 : 透過ElasticSearch全文檢索引擎建立快速查找文獻、關鍵字、研究領域、全文比對文獻等API。
+                            </li>
+                            <li>
+                                前端串接 : 開發系統介面，包含查詢系統、論壇、用戶管理系統、儀錶板等，透過非同步Request提高多個API查詢速度
+                            </li>
+                            <li>
+                                後端/資料庫 : 撰寫API串接NoSQLDB、ElasticSearch
+                            </li>
+                            <li>
+                                外部API : Google登入串接/Facebook分享/Line分享
+                            </li>
+                            <li>
+                                頁面優化 : GZIP壓縮/Google Tag追蹤/FB Pixel Code
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="eventnews">
+                        <h4>相關活動網站與新聞</h4>
+                        <ul>
+                            <li>
+                                <a target="_blank" href="https://speedup.doresearch.tw">研究新手救星/測試你的研究痛苦指數</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-time">
+                    <p>
+                        <i class="fas fa-calendar-day"></i> 2015/8~2020/9
+                    </p>
+                </div>
+                <div class="project-Img">
+                    <img src="~/Content/img/projects/dailyview.tw.png" alt="DailyViewTW" />
+                </div>
+                <div class="project-info">
+                    <div class="name">
+                        <a target="_blank" href="https://dailyview.tw">Dailyview網路溫度計</a>
+                    </div>
+                    <div class="description">
+                        Dailyview網路溫度計觀察網路新聞頻道、FB、PTT、各大討論區及部落格...等國內近萬個網站頻道。
+                        透過網路爬文技術取得巨量資料，並利用語意情緒分析，產出網路大數據分析<br>
+                        我在本專案負責雲端平台管理、前後端程式、資料庫管理、資料分析，與平台編輯、分析師、語意情緒分析研發團隊合作。
+                    </div>
+                </div>
+                <div class="project-detail">
+
+                    <div class="features">
+                        <h4>工作項目</h4>
+                        <ul>
+                            <li>
+                                雲端平台 : 根據專案內容使用 Azure VM/WebAPP/Blob/CDN等服務，並透過AzureDevops實現版本控制、自動部署
+                            </li>
+                            <li>
+                                資料收集程式 : 根據專案內容，撰寫非同步爬蟲程式，收集數據於關聯式資料庫。(例如口罩存量、中選會等政府公開數據)
+                            </li>
+                            <li>
+                                資料分析 : 與語意情緒分析研發團隊及分析師合作合作計算各候選人選舉勝率相關指標
+                            </li>
+                            <li>
+                                前端串接 : 開發系統介面，包含官網、各活動網頁、後台WYSIWYG編輯器、Google廣告代碼、Google AMP Page等
+                            </li>
+                            <li>
+                                後端/資料庫 : 撰寫API串接關聯式DB、外部API
+                            </li>
+                            <li>
+                                外部API : Facebook登入、Facebook分享、line分享等
+                            </li>
+                            <li>
+                                頁面優化 : GZIP壓縮/Google Tag追蹤/FB Pixel Code
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="eventnews">
+                        <h4>相關活動網站與新聞</h4>
+                        <ul>
+                            <li>
+                                <a target="_blank" href="https://dailyview.tw/covid19">疫情下的社群傳染病 | 專題 |  DailyView 網路溫度計</a> |
+                                <a target="_blank" href="https://news.cts.com.tw/mol/campus/202010/202010202017857.html">
+                                    <i class="fas fa-external-link-square-alt"></i>網路溫度計獲曾虛白報導獎 盼網路不應散播恐懼-華視新聞網
+                                </a>
+                            </li>
+                            <li>
+                                <a>2020選戰溫度計(網站已關閉)</a> |
+                                <a target="_blank" href="https://www.youtube.com/watch?v=RaklNdOVMWk">
+                                    <i class="fab fa-youtube-square"></i>大選章魚哥 / 2020選戰溫度計 精準預測選情
+                                </a>|
+                                <a target="_blank" href="https://www.nownews.com/news/3884392">
+                                    <i class="fas fa-external-link-square-alt"></i>名家論壇》網路溫度計／大數據準確命中韓國瑜得票率
+                                </a>
+                            </li>
+                            <li>
+                                <a>2018選戰溫度計(網站已關閉)</a> |
+                                <a target="_blank" href="https://dailyview.tw/Popular/Detail/3317">
+                                    <i class="fas fa-external-link-square-alt"></i>民調封關！2018選戰溫度計預估 國民黨拿下12席民進黨保7
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-time">
+                    <p>
+                        <i class="fas fa-calendar-day"></i> 2015/8~2020/9
+                    </p>
+                </div>
+                <div class="project-Img">
+                    <img src="~/Content/img/projects/bigdatagroup.png" alt="BigDataGroup.TW" />
+                </div>
+                <div class="project-info">
+                    <div class="name">
+                        <a target="_blank" href="https://group.dailyview.tw">大數聚</a>
+                    </div>
+                    <div class="description">
+                        平台聚集各領域的專家，檢視時下重要議題及產業趨勢，發表分析及文章。<br>
+                        我在本專案負責雲端平台管理、前後端程式、資料庫管理，與平台編輯合作。
+                    </div>
+                </div>
+                <div class="project-detail">
+
+                    <div class="features">
+                        <h4>工作項目</h4>
+                        <ul>
+                            <li>
+                                雲端平台 : 使用 Azure 服務，並透過AzureDevops實現版本控制
+                            </li>
+                            <li>
+                                前端串接 : 串接系統介面，包含官網、後台WYSIWYG編輯器、Google廣告代碼、Google AMP Page等
+                            </li>
+                            <li>
+                                後端/資料庫 : 撰寫API串接關聯式DB
+                            </li>
+                            <li>
+                                外部API : Facebook分享、line分享等
+                            </li>
+                            <li>
+                                頁面優化 : GZIP壓縮/Google Tag追蹤/FB Pixel Code
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-time">
+                    <p>
+                        <i class="fas fa-calendar-day"></i> 2018/2~2018/9
+                    </p>
+                </div>
+                <div class="project-Img">
+                    <img src="~/Content/img/projects/WhenWeOld.jpg" alt="WhenWeOld" />
+                </div>
+                <div class="project-info">
+                    <div class="name">
+                        <a target="_blank" href="https://lkk.ntpc.gov.tw/">當我們老在一起Line機器人</a>
+                    </div>
+                    <div class="description">
+                        新北市觀旅局Line機器人<br>
+                        我在本專案負責Google DialogFlow 語意分析 API串接
+                    </div>
+                </div>
+                <div class="project-detail">
+
+                    <div class="features">
+                        <h4>工作項目</h4>
+                        <ul>
+                            <li>
+                                與開發Line機器人同仁合作，針對用戶發的訊息先經過DialogFlow  API語意分析，回傳執行指令。
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="eventnews">
+                        <h4>相關活動網站與新聞</h4>
+                        <ul>
+                            <li>
+                                <a target="_blank" href="https://www.chinatimes.com/campus/20180718001966-262301?chdtv">
+                                    「當我們老在一起」LINE@改版了! 你家長輩加好友了沒？
+                                </a> |
+                                <a target="_blank" href="https://www.youtube.com/watch?v=PPX25G4fzf8">
+                                    <i class="fab fa-youtube-square"></i>「當我們老在一起」LINE 聊天機器人 改版囉
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--作品展示-->
+<div id="section-sideProjects" class="section">
+    <div class="section-content">
+        <div class="label">
+            <div class="text">
+                <h3><i class="fas fa-laptop-code"></i>  作品展示</h3>
+            </div>
+        </div>
+        <div class="login">
+            <a target="_blank" href="/SideProjects" class="login-with-google-btn">
+                Google登入查看更多
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="section-siteInfo" class="section">
+    <div class="section-content">
+        <div class="label">
+            <div class="text">
+                <h3><i class="fas fa-cog"></i>  本站資訊</h3>
+            </div>
+        </div>
+        <div class="table">
+            <div class="tr">
+                <div class="th">本站應用</div>
+                <div class="th">技術/版本</div>
+            </div>
+            <div class="tr">
+                <div class="td">主機</div>
+                <div class="td">linode ubuntu 20.04</div>
+            </div>
+            <div class="tr">
+                <div class="td">後端</div>
+                <div class="td">.Net Core 3.1 MVC</div>
+            </div>
+            <div class="tr">
+                <div class="td">前端</div>
+                <div class="td">Javascript,css ( scss as Preprocessor )</div>
+            </div>
+            <div class="tr">
+                <div class="td">原始碼</div>
+                <div class="td"><a target="_blank" href="##"><i class="fab fa-github"></i></a></div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+@{
+
+    void AbilityBar(string name, int score, string className)
+    {
+        <div class="ability-bar @className">
+            <div class="text">
+                <div class="name">@(name) </div>
+                <div class="score">@(score)%</div>
+            </div>
+            <div class="bar">
+                <div class="line" style="width:@score%" ;>
+                </div>
+            </div>
+        </div>
+    }
+
+}

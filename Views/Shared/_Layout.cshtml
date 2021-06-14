@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我是周宇軒，一個全端開發者  My name is YuShiuan-Jhou, a full stack developer. </title>
+    <link rel="icon" href="~/Content/favicon/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link href="~/Content/css/reset.css" rel="stylesheet" />
+    <link href="~/Content/css/common.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Arvo&family=Carter+One&family=Noto+Sans+TC:wght@100&family=Noto+Sans+TC:wght@300&family=Noto+Serif+TC:wght@200;300&display=swap" rel="stylesheet">    @RenderSection("PageStyles", required: false)
+
+</head>
+<body>
+    <nav>
+        <div class="nav-wrap">
+            <div class="nav-box nav-logo">
+                <a href="/">
+                    <p>
+                        <strong>Y</strong>u<strong>S</strong>iuan-<strong>J</strong>hou
+                    </p>
+                </a>
+            </div>
+            <div class="nav-box nav-menu">
+                <a id="nav-about" href="javascript:;">關於我</a>
+                <a id="nav-projects" href="javascript:;">專案經歷</a>
+                <a id="nav-sideProjects" href="javascript:;">作品展示</a>
+                <a id="nav-site" href="javascript:;">本站資訊</a>
+            </div>
+            <div class="nav-box nav-mobile-toggle">
+                <a id="nav-mobile-toggle-link" href="javascript:;">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="nav-mobile" class="nav-mobile" >
+
+        <div class="close">
+            <a  id="nav-mobile-close-link" href="javascript:;">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
+
+
+        <div class="nav-mobile-content">
+            <div class="nav-mobile-menu">
+                <a id="nav-about-mobile" href="javascript:;">關於我</a>
+                <a id="nav-projects-mobile" href="javascript:;">專案經歷</a>
+                <a id="nav-sideProjects-mobile" href="javascript:;">作品展示</a>
+                <a id="nav-site-mobile" href="javascript:;">本站資訊</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <footer>
+        © 2021 ys-j.tw
+    </footer>
+
+
+    <script src="https://kit.fontawesome.com/8040507cb4.js" crossorigin="anonymous"></script>
+    <script src="~/Content/js/common.js"></script>
+    @RenderSection("PageScripts", required: false)
+</body>
+</html>

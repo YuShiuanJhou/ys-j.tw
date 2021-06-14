@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "wwwroot/Content/css/common.css",
+    "inputFile": "wwwroot/Content/css/common.scss"
+  },
+  {
+    "outputFile": "wwwroot/Content/css/home.css",
+    "inputFile": "wwwroot/Content/css/home.scss"
+  },
+  {
+    "outputFile": "wwwroot/Content/css/sideprojects.css",
+    "inputFile": "wwwroot/Content/css/sideprojects.scss"
+  }
+]

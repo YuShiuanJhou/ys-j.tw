@@ -1,0 +1,154 @@
+﻿@{
+
+    string fullName = ViewBag.fullName;
+    string email = ViewBag.email;
+    string cmv = ViewBag.cmv;
+    List<Company> companies = ViewBag.companies as List<Company>;
+}
+
+@section PageStyles{
+    <link href="~/Content/css/sideprojects.css" rel="stylesheet" />
+}
+
+<div id="section-projects" class="section">
+    <div class="section-content">
+        <div class="sideProject-box">
+            <div class="header">
+                <div class="text">
+                    <h3>作品展示 : 104公司職缺分析</h3>
+                </div>
+                <div class="tech-detail">
+                    <p>資料收集:Python Selenium/後端串接:.NetCore3.1/NoSQL:MongoDB</p>
+                </div>
+
+            </div>
+            <div class="detail">
+                @foreach (var company in companies)
+                {
+                    <div class="c104">
+                        <div class="cTitleAndInfo">
+                            <div class="cTitle">
+                                <div class="cLogo">
+                                    <img src="~/Content/img/sideProjects/@(company.code).png" alt="Alternate Text" />
+                                </div>
+
+                                <div class="cName">
+                                    <p>
+                                        @company.name
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="cInfo">
+                                <div class="cInfo-box">
+                                    <div class="name">
+                                        職缺總數
+                                    </div>
+                                    <div class="content">
+                                        <div class="value">
+                                            @company.jobCount
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cInfo-box">
+                                    <div class="name">
+                                        地區總數
+                                    </div>
+                                    <div class="content">
+                                        <div class="value">
+                                            @company.areaCount
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cInfo-table">
+                                    <div class="name">
+                                        地區統計
+                                    </div>
+                                    <div class="table">
+                                        @foreach (var groupItem in company.areaStatistics)
+                                        {
+                                            <div class="tr">
+                                                <div class="td">@(groupItem.key)</div>
+                                                <div class="td">@(groupItem.count) (@groupItem.percentage%)</div>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="cRanking">
+                            <div class="cRanking-box">
+                                <div class="name">
+                                    經歷需求統計
+                                </div>
+                                <div class="table">
+                                    @foreach (var groupItem in company.workExpStatistics)
+                                    {
+                                        <div class="tr">
+                                            <div class="td">@(groupItem.key)</div>
+                                            <div class="td">@(groupItem.count) (@groupItem.percentage%)</div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="cRanking-box">
+                                <div class="name">
+                                    學歷需求統計
+                                </div>
+                                <div class="table">
+                                    @foreach (var groupItem in company.educationStatistics)
+                                    {
+                                        <div class="tr">
+                                            <div class="td">@(groupItem.key)</div>
+                                            <div class="td">@(groupItem.count) (@groupItem.percentage%)</div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="cRanking-box">
+                                <div class="name">
+                                    薪資待遇統計
+                                </div>
+                                <div class="table">
+                                    @foreach (var groupItem in company.payInfoStatistics)
+                                    {
+                                        <div class="tr">
+                                            <div class="td">@(groupItem.key)</div>
+                                            <div class="td">@(groupItem.count) (@groupItem.percentage%)</div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="cRanking-box">
+                                <div class="name">
+                                    應徵人數統計
+                                </div>
+                                <div class="table">
+                                    @foreach (var groupItem in company.applyRangeInfoStatistics)
+                                    {
+                                        <div class="tr">
+                                            <div class="td">@(groupItem.key)</div>
+                                            <div class="td">@(groupItem.count) (@groupItem.percentage%)</div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
